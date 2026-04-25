@@ -1,20 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package semana3;
 
-/**
- *
- * @author sistemas
- */
-public class Pato {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public abstract class Pato {
+    
+    protected Volable volable;
+    protected Cuaqueable cuaqueable;
+    
+    public void setVolable(Volable fb) {
+        this.volable = volable;
     }
     
+    public void setCuaqueable(Cuaqueable qb) {
+        this.cuaqueable = cuaqueable;
+    }
+    
+    public abstract void mostrar();
+    public abstract void realizarVuelo();
+    public abstract void realizarCuaqueo();
+    public void nadar() {
+        System.out.println("TODOS LOS PATOS NADAN");
+    }
 }
